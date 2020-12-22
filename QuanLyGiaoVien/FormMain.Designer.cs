@@ -66,6 +66,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1134, 142);
             this.label1.TabIndex = 12;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnBoMon
             // 
@@ -119,6 +120,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(1187, 72);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // tàiKhoảnToolStripMenuItem
             // 
@@ -170,28 +172,28 @@
             // khoaToolStripMenuItem
             // 
             this.khoaToolStripMenuItem.Name = "khoaToolStripMenuItem";
-            this.khoaToolStripMenuItem.Size = new System.Drawing.Size(224, 32);
+            this.khoaToolStripMenuItem.Size = new System.Drawing.Size(176, 32);
             this.khoaToolStripMenuItem.Text = "Khoa";
             this.khoaToolStripMenuItem.Click += new System.EventHandler(this.khoaToolStripMenuItem_Click);
             // 
             // bộMônToolStripMenuItem
             // 
             this.bộMônToolStripMenuItem.Name = "bộMônToolStripMenuItem";
-            this.bộMônToolStripMenuItem.Size = new System.Drawing.Size(224, 32);
+            this.bộMônToolStripMenuItem.Size = new System.Drawing.Size(176, 32);
             this.bộMônToolStripMenuItem.Text = "Bộ Môn";
             this.bộMônToolStripMenuItem.Click += new System.EventHandler(this.bộMônToolStripMenuItem_Click);
             // 
             // họcHàmToolStripMenuItem
             // 
             this.họcHàmToolStripMenuItem.Name = "họcHàmToolStripMenuItem";
-            this.họcHàmToolStripMenuItem.Size = new System.Drawing.Size(224, 32);
+            this.họcHàmToolStripMenuItem.Size = new System.Drawing.Size(176, 32);
             this.họcHàmToolStripMenuItem.Text = "Học hàm";
             this.họcHàmToolStripMenuItem.Click += new System.EventHandler(this.họcHàmToolStripMenuItem_Click);
             // 
             // họcVịToolStripMenuItem
             // 
             this.họcVịToolStripMenuItem.Name = "họcVịToolStripMenuItem";
-            this.họcVịToolStripMenuItem.Size = new System.Drawing.Size(224, 32);
+            this.họcVịToolStripMenuItem.Size = new System.Drawing.Size(176, 32);
             this.họcVịToolStripMenuItem.Text = "Học vị";
             this.họcVịToolStripMenuItem.Click += new System.EventHandler(this.họcVịToolStripMenuItem_Click);
             // 
@@ -234,6 +236,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "FormMain";
             this.Text = "FormMain";
+            this.Load += new System.EventHandler(this.FormMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
