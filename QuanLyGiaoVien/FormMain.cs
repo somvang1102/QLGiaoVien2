@@ -67,12 +67,24 @@ namespace QuanLyGiaoVien
 
         private void họcHàmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            data1.Visible = true;
+            button1.Visible = true;
+            btnBoMon.Visible = false;
+            comboBoxKhoa.Visible = false;
+            data1.DataSource = bus_HocHam_HocVi.thongkeHocHam("SELECT dbo.GiaoVien.HoTen,dbo.HocHam.Ma_HocHam,tenHocHam FROM dbo.HocHam,dbo.GiaoVien WHERE dbo.GiaoVien.Ma_HocHam = dbo.HocHam.Ma_HocHam");
+            data1.Columns[0].HeaderText = "Giáo Viên";
+            data1.Columns[1].HeaderText = "Mã Học Hàm";
+            data1.Columns[2].HeaderText = "Tên Học Hàm";
         }
 
         private void họcVịToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            data1.Visible = true;
+            button1.Visible = true;
+            data1.DataSource = bus_HocHam_HocVi.thongkeHocHam("SELECT dbo.GiaoVien.HoTen,dbo.HocVi.Ma_HocVi,TenHocVi FROM dbo.HocVi,dbo.GiaoVien WHERE dbo.GiaoVien.Ma_HocVi = dbo.HocVi.Ma_HocVi");
+            data1.Columns[0].HeaderText = "Giáo Viên";
+            data1.Columns[1].HeaderText = "Mã Học Vị";
+            data1.Columns[2].HeaderText = "Tên Học Vị";
         }
 
         private void danhSáchGiáoViênToolStripMenuItem_Click(object sender, EventArgs e)
