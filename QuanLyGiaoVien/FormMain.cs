@@ -42,7 +42,10 @@ namespace QuanLyGiaoVien
 
         private void thôngTinToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ThongTinTaiKhoan f = new ThongTinTaiKhoan();
+            f.TenTaiKhoan = textBox1.Text;
 
+            f.ShowDialog();
         }
 
         private void khoaToolStripMenuItem_Click(object sender, EventArgs e)
